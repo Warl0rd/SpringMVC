@@ -11,13 +11,35 @@
 	
 	<h3>STUDENT ADMISSION FORM FOR ENGINEERING COURSES</h3>
 	
-	<form action="/SpringMVC/submitAdmissionForm.html" method="post">
-		<p>
-			Student's Name: <input type="text" name="studentName"/>
-		</p>
-		<p>
-			Student's Hobby: <input type="text" name="studentHobby"/>
-		</p>
+	<form action="submitAdmissionForm.html" method="post">
+		<table>
+			<tr>
+				<td>Student's Name:</td>
+				<td><input type="text" name="studentName"/></td>
+			</tr>
+			<tr>
+				<td>Student's Hobby:</td>
+				<td><input type="text" name="studentHobby"/></td>
+			</tr>
+			<tr>
+				<td>Student's Mobile</td>
+				<td><input type="text" name="studentMobile"/></td>
+			</tr>
+			<tr>
+				<td>Student's DOB:</td>
+				<td><input type="text" name="studentDOB"/></td>
+			</tr>
+			<tr>
+				<td>Student's Skills set:</td>
+				<td>
+					<select name="studentSkills" multiple>
+						<option value="Java Core">Java Core</option>
+						<option value="Spring Core">Spring Core</option>
+						<option value="Spring MVC">Spring MVC</option>
+					</select>
+				</td>
+			</tr>
+		</table>
 		<input type="submit" value="Submit"/>
 	</form>
 </body>

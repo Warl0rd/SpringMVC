@@ -22,6 +22,18 @@
 			<td>Student Hobby:</td>
 			<td>${student.studentHobby}</td>
 		</tr>
+		<tr>
+			<td>Student's Mobile:</td>
+			<td>${student.studentMobile}</td>
+		</tr>
+		<tr>
+			<td>Student's DOB:</td>
+			<td>${student.studentDOB}</td>
+		</tr>
+		<tr>
+			<td>Student's Skills:</td>
+			<td>${student.studentSkills}</td>
+		</tr>
 	</table>
 </body>
 </html>
