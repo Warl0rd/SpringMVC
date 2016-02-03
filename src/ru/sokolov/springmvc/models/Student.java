@@ -16,7 +16,7 @@ public class Student {
 	private String studentName;
 	
 	@Size(min=2, max=30)
-	@IsValidHobby
+	@IsValidHobby(listOfValidHobbies="Chess|Music|Football|Cricket|Hockey")
 	private String studentHobby;
 	
 	@Max(2222)
