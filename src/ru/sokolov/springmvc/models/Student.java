@@ -19,7 +19,7 @@ public class Student {
 	@IsValidHobby(listOfValidHobbies="Chess|Music|Football|Cricket|Hockey")
 	private String studentHobby;
 	
-	@Max(2222)
+	@Max(90000000000l)
 	private Long studentMobile;
 	
 	@Past
