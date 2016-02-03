@@ -24,7 +24,7 @@ public class StudentAdmissionController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		
+		//Not include the field in the model
 //		binder.setDisallowedFields(new String[] {"studentMobile"});
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 		binder.registerCustomEditor(Date.class, "studentDOB", new CustomDateEditor(dateFormat, false));
