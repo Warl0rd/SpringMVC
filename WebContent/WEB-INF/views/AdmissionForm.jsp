@@ -7,7 +7,10 @@
 <title>Student admission form</title>
 </head>
 <body>
-	<h1>STUDENT ADMISSION FORM FOR ENGINEERING COURSES</h1>
+	<h1>${headerMessage}</h1>
+	
+	<h3>STUDENT ADMISSION FORM FOR ENGINEERING COURSES</h3>
+	
 	<form action="/SpringMVC/submitAdmissionForm.html" method="post">
 		<p>
 			Student's Name: <input type="text" name="studentName"/>

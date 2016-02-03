@@ -1,6 +1,7 @@
 package ru.sokolov.springmvc.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,11 +20,16 @@ public class StudentAdmissionController {
 		return model;
 	}
 	
+	@ModelAttribute
+	public void addingCommonObject(Model model) {
+		
+		model.addAttribute("headerMessage", "Warlord college of engeneering, Russia");
+	}
+	
 	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
 	public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student) {
 		
 		ModelAndView model = new ModelAndView("AdmissionSuccess");
-		model.addObject("headerMessage", "Warlord college of engeneering, Russia");
 		
 		return model;
 	}
