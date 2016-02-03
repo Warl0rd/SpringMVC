@@ -3,10 +3,13 @@ package ru.sokolov.springmvc.models;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Student {
 
 	private String studentName;
 	
+	@Size(min=2, max=30)
 	private String studentHobby;
 	
 	private Long studentMobile;
