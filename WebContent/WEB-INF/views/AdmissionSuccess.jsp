@@ -15,11 +15,11 @@
 	
 	<table>
 		<tr>
-			<td>Student Name:</td>
+			<td>Student's Name:</td>
 			<td>${student.studentName}</td>
 		</tr>
 		<tr>
-			<td>Student Hobby:</td>
+			<td>Student's Hobby:</td>
 			<td>${student.studentHobby}</td>
 		</tr>
 		<tr>
