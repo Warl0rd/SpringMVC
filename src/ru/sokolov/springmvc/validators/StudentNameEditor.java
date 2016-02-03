@@ -13,7 +13,7 @@ public class StudentNameEditor extends PropertyEditorSupport {
 			
 		} else {
 			
-			studentName = "Ms. "+studentName;
+			studentName = "Mr. "+studentName;
 			
 			setValue(studentName);
 		}
