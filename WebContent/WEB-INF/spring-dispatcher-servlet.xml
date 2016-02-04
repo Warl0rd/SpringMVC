@@ -12,7 +12,6 @@
 	   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="ru.sokolov.springmvc"/>
-
 	<mvc:annotation-driven/>
 	
 	<mvc:interceptors>
@@ -20,6 +19,10 @@
 			<mvc:mapping path="/admissionForm.html"/>
 			<bean class="ru.sokolov.springmvc.interceptors.DayOfWeekBasedAccessInterceptor"/>
 		</mvc:interceptor>
+		
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="siteLanguage"/>
+		</bean>
 	</mvc:interceptors>
 
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -37,5 +40,7 @@
 		<!-- <property name="fallbackToSystemLocale" value="false"/> -->
 		<property name="cacheSeconds" value="2"/> <!-- only for developing, NOT FOR PRODUCTION! -->
 	</bean>
+	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>
 	
 </beans>

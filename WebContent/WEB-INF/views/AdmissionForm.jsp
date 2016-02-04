@@ -8,13 +8,16 @@
 <title><spring:message code="label.admissionForm.title"/></title>
 </head>
 <body>
+	<a href="/SpringMVC/admissionForm.html?siteLanguage=ru">Russian</a>|
+	<a href="/SpringMVC/admissionForm.html?siteLanguage=en">English</a>
+	
 	<h1><spring:message code="label.headerMessage"/></h1>
 	
 	<h3><spring:message code="label.admissionForm.h3"/></h3>
 	
 	<form:errors path="student.*"/>
 	
-	<form action="submitAdmissionForm.html" method="post">
+	<form action="/SpringMVC/submitAdmissionForm.html" method="post">
 		<table>
 			<tr>
 				<td><spring:message code="label.studentName"/>:</td>
