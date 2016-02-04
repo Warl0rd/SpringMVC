@@ -5,9 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="<spring:theme code='styleSheet'/>" type="text/css"/>
 <title><spring:message code="label.admissionForm.title"/></title>
 </head>
 <body>
+	<p>
+		<a href="/SpringMVC/admissionForm.html?siteTheme=green">Green</a>|
+		<a href="/SpringMVC/admissionForm.html?siteTheme=red">Red</a>
+	</p>
+	
 	<a href="/SpringMVC/admissionForm.html?siteLanguage=ru">Russian</a>|
 	<a href="/SpringMVC/admissionForm.html?siteLanguage=en">English</a>
 	
