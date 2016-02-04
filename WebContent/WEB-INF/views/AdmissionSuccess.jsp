@@ -1,46 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Congratulations!</title>
+<title><spring:message code="label.admissionSuccess.title"/></title>
 </head>
 <body>
-	<h1>${headerMessage}</h1>
+	<h1><spring:message code="label.headerMessage"/></h1>
 	
-	<h3>Congratulations! The Engineering college has processed your Application form successfully</h3>
+	<h3><spring:message code="label.admissionSuccess.h3"/></h3>
 	
-	<h2>Details submitted by you::</h2>
+	<h2><spring:message code="label.admissionSuccess.details"/>::</h2>
 	
 	<table>
 		<tr>
-			<td>Student's Name:</td>
+			<td><spring:message code="label.studentName"/>:</td>
 			<td>${student.studentName}</td>
 		</tr>
 		<tr>
-			<td>Student's Hobby:</td>
+			<td><spring:message code="label.studentHobby"/>:</td>
 			<td>${student.studentHobby}</td>
 		</tr>
 		<tr>
-			<td>Student's Mobile:</td>
+			<td><spring:message code="label.studentMobile"/>:</td>
 			<td>${student.studentMobile}</td>
 		</tr>
 		<tr>
-			<td>Student's DOB:</td>
+			<td><spring:message code="label.studentDOB"/>:</td>
 			<td>${student.studentDOB}</td>
 		</tr>
 		<tr>
-			<td>Student's Skills:</td>
+			<td><spring:message code="label.studentSkills"/>:</td>
 			<td>${student.studentSkills}</td>
 		</tr>
 		<tr>
-			<td>Student Address:</td>
+			<td><spring:message code="label.studentAddress"/>:</td>
 			<td>
-				country: ${student.studentAddress.country}
-				city: ${student.studentAddress.city}
-				street: ${student.studentAddress.street}
-				pincode: ${student.studentAddress.pincode}
+				<spring:message code="label.studentCountry"/>: ${student.studentAddress.country}
+				<spring:message code="label.studentCity"/>: ${student.studentAddress.city}
+				<spring:message code="label.studentStreet"/>: ${student.studentAddress.street}
+				<spring:message code="label.studentPincode"/>: ${student.studentAddress.pincode}
 			</td>
 		</tr>
 	</table>
