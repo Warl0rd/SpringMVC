@@ -34,13 +34,6 @@ public class StudentAdmissionController {
 	@RequestMapping(value="/admissionForm.html", method=RequestMethod.GET)
 	public ModelAndView getAdmissionForm() throws Exception {
 		
-//		for testing
-//		String exception = "null";
-//		if ("null".equals(exception)) {
-//			
-//			throw new ArithmeticException();
-//		}
-		
 		ModelAndView model = new ModelAndView("AdmissionForm");
 		
 		return model;
