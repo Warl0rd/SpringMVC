@@ -1,6 +1,5 @@
 package ru.sokolov.springmvc.controllers;
 
-import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
