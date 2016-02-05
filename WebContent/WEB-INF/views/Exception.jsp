@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Error Page</title>
 </head>
 <body>
 	<h1>Warlord college of engeneering, Russia</h1>
 	
-	<h3>Application has encountered a Null Pointer error. Please contact
+	<h3>Application has encountered an unknown error. Please contact
 		support by sending an email at web@web.ru</h3>
 </body>
 </html>

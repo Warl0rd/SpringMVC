@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class GlobalExceptionHandlerMethods {
+	
 	@ExceptionHandler(value=NullPointerException.class)
 	public String handleNullPointerException(Exception e) {
 		
 		System.out.println("Null Pointer Exception occured: "+e);
 		
-		return "exceptions/NullPointerException";
+		return "NullPointerException";
 	}
 	
 	@ExceptionHandler(value=IOException.class)
@@ -20,7 +21,7 @@ public class GlobalExceptionHandlerMethods {
 		
 		System.out.println("IO Exception occured: "+e);
 		
-		return "exceptions/IOException";
+		return "IOException";
 	}
 	
 	@ExceptionHandler(value=Exception.class)
@@ -28,6 +29,6 @@ public class GlobalExceptionHandlerMethods {
 		
 		System.out.println("Unknown Exception occured: "+e);
 		
-		return "exceptions/Exception";
+		return "Exception";
 	}
 }

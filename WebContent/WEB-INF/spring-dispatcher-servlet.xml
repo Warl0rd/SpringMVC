@@ -14,8 +14,10 @@
 	<context:component-scan base-package="ru.sokolov.springmvc"/>
 	<mvc:annotation-driven/>
 	
-	<mvc:resources location="/WEB-INF/" mapping="/resources/**"/>
+	<!-- <mvc:resources location="/WEB-INF/" mapping="/resources/**"/> -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	
+	<!-- interceptors -->
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/admissionForm.html"/>
@@ -31,15 +33,13 @@
 		</bean>
 	</mvc:interceptors>
 
+	<!-- views -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/views/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
 	</bean>
 	
+	<!-- i18n -->
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/i18n/studentmessages"/>
 		<!-- <property name="defaultEncoding" value="UTF-8"/> -->
@@ -49,6 +49,7 @@
 	
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>
 	
+	<!-- themes -->
 	<bean id="themeSource" class="org.springframework.ui.context.support.ResourceBundleThemeSource">
 		<property name="basenamePrefix" value="theme-"/>
 	</bean>
@@ -56,5 +57,20 @@
 	<bean id="themeResolver" class="org.springframework.web.servlet.theme.CookieThemeResolver">
 		<property name="defaultThemeName" value="green"/>
 	</bean>
+	
+	<!-- exceptions -->
+	<!-- <bean id="simpleMappingExceptionResolver" class="org.springframework.web.portlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<map>
+				<entry key="NullPointerException" value="NullPointerException"/>
+				<entry key="IOException" value="IOException"/>
+				<entry key="Exception" value="Exception"/>
+			</map>
+		</property>
+		
+		<property name="defaultErrorView" value="Exception"/>
+		
+		<property name="warnLogCategory" value="MVCLogger"/>
+	</bean> -->
 	
 </beans>

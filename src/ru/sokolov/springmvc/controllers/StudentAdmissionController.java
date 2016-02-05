@@ -1,5 +1,6 @@
 package ru.sokolov.springmvc.controllers;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
@@ -35,11 +36,11 @@ public class StudentAdmissionController {
 	public ModelAndView getAdmissionForm() throws Exception {
 		
 //		for testing
-		String exceprion = "null";
-		if ("null".equals(exceprion)) {
-			
-			throw new ArithmeticException();
-		}
+//		String exception = "null";
+//		if ("null".equals(exception)) {
+//			
+//			throw new ArithmeticException();
+//		}
 		
 		ModelAndView model = new ModelAndView("AdmissionForm");
 		
