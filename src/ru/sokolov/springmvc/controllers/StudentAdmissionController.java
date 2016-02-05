@@ -1,6 +1,5 @@
 package ru.sokolov.springmvc.controllers;
 
-import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,11 +35,11 @@ public class StudentAdmissionController {
 	public ModelAndView getAdmissionForm() throws Exception {
 		
 //		for testing
-//		String exceprion = "null";
-//		if ("null".equals(exceprion)) {
-//			
-//			throw new ArithmeticException();
-//		}
+		String exceprion = "null";
+		if ("null".equals(exceprion)) {
+			
+			throw new ArithmeticException();
+		}
 		
 		ModelAndView model = new ModelAndView("AdmissionForm");
 		
@@ -66,29 +64,5 @@ public class StudentAdmissionController {
 		ModelAndView model = new ModelAndView("AdmissionSuccess");
 		
 		return model;
-	}
-	
-	@ExceptionHandler(value=NullPointerException.class)
-	public String handleNullPointerException(Exception e) {
-		
-		System.out.println("Null Pointer Exception occured: "+e);
-		
-		return "NullPointerException";
-	}
-	
-	@ExceptionHandler(value=IOException.class)
-	public String handleIOException(Exception e) {
-		
-		System.out.println("IO Exception occured: "+e);
-		
-		return "IOException";
-	}
-	
-	@ExceptionHandler(value=Exception.class)
-	public String handleException(Exception e) {
-		
-		System.out.println("Unknown Exception occured: "+e);
-		
-		return "Exception";
 	}
 }
